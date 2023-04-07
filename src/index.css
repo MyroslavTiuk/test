@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Roboto', 'sans-serif';
+    width: 100%;
+    height: 100vh;
+    color: #595959;
+  }
+
+  article {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100vw;
+  }
+}
+
+@layer components {
+  .wrapper {
+    max-width: 1960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .text-overflow-4-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
